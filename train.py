@@ -27,7 +27,7 @@ logger.addHandler(console_handle)
 
 def define_preprocessing_pipeline():
     """
-
+    Define a custom preprocessing pipeline
     :return:
     """
     general_transformations = Pipeline([('boolean', BooleanTransformation(columns=to_boolean)),
@@ -51,7 +51,7 @@ def define_preprocessing_pipeline():
 
 def train(transformer_pipeline, train_data):
     """
-
+    Train the model using the train data
     :param transformer_pipeline:
     :param train_data:
     :return:
@@ -71,7 +71,7 @@ def train(transformer_pipeline, train_data):
 
 def prediction(model, test_data):
     """
-
+    Generate a prediction of test data
     :param model:
     :param test_data:
     :return:
@@ -83,6 +83,12 @@ def prediction(model, test_data):
 
 
 def save_metrics(metrics: dict, path: str):
+    """
+    Save the main classification metrics
+    :param metrics:
+    :param path:
+    :return:
+    """
     with open(path, 'w') as file_path:
         json.dump(metrics, file_path)
     logger.info('Se han guarado las metricas del modelo correctamente')
@@ -90,6 +96,12 @@ def save_metrics(metrics: dict, path: str):
 
 
 def serialize_model(model, model_path: str):
+    """
+    Serialize the fitted model
+    :param model:
+    :param model_path:
+    :return:
+    """
     logger.info('El modelo se ha serializado exitosamente.')
     return joblib.dump(model, filename=model_path)
 
