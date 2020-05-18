@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <title>Will our clients cancel?</title>
+</head>
+<body>
+<div class="align-center">
+   <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Will our clients cancel?</h5>
+        <form method="POST" action="/churn">
+            <div class="form-group">
+                <label for="id"></label>
+                <input type="text" class="form-control" id="id" name="id" aria-describedby="emailHelp" placeholder="Id">
+                <label for="customer"></label>
+                <input type="text" class="form-control" id="customer" name="customer" aria-describedby="emailHelp" placeholder="Customer Id">
+                <label for="surname"></label>
+                <input type="text" class="form-control" id="surname" name="surname" aria-describedby="emailHelp" placeholder="Surname">
+                <label for="score"></label>
+                <input type="text" class="form-control" id="score" name="score" aria-describedby="emailHelp" placeholder="Credit Score">
+                <label for="geography"></label>
+                <input type="text" class="form-control" id="geography" name="geography" aria-describedby="emailHelp" placeholder="geography">
+                <label for="gender"></label>
+                <input type="text" class="form-control" id="gender" name="gender" aria-describedby="emailHelp" placeholder="Gender">
+                <label for="age"></label>
+                <input type="text" class="form-control" id="age" name="age" aria-describedby="emailHelp" placeholder="Age">
+                <label for="tenure"></label>
+                <input type="text" class="form-control" id="tenure" name="tenure" aria-describedby="emailHelp" placeholder="Tenure">
+                <label for="balance"></label>
+                <input type="text" class="form-control" id="balance" name="balance" aria-describedby="emailHelp" placeholder="Balance">
+                <label for="products"></label>
+                <input type="text" class="form-control" id="products" name="products" aria-describedby="emailHelp" placeholder="Number of products">
+                <label for="crcard"></label>
+                <input type="text" class="form-control" id="crcard" name="crcard" aria-describedby="emailHelp" placeholder="Has Credit Card">
+                <label for="activemember"></label>
+                <input type="text" class="form-control" id="activemember" name="activemember" aria-describedby="emailHelp" placeholder="Is Active Member">
+                <label for="salary"></label>
+                <input type="text" class="form-control" id="salary" name="salary" aria-describedby="emailHelp" placeholder="Estimated Salary">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+</div>
