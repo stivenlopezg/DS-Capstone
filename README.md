@@ -18,18 +18,22 @@ The above code produces these results in terminal:
     `python train.py`
     
 The above code produces these results in terminal:
+
 <img src='screenshots/train.png' alt="">
     
 3. Finally the web page is run to make an inference online, the following command does the above:
     `python run.py`
     
 The above code produces these results in terminal:
+
 <img src='screenshots/run.png' alt="">
 
 The website looks as follows:
+
 <img src='screenshots/web_page.png' alt="">
 
 And when making the inference this is the result:
+
 <img src='screenshots/inference.png' alt="">
 
 ## Metrics
