@@ -14,7 +14,7 @@ def load_model(model_path: str):
 
 def predict(model, data):
     """
-
+    Generate a prediction of new data
     :param model:
     :param data:
     :return:
