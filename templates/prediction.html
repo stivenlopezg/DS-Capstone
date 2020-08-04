@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.min.css') }}">
+      <title>Will our clients cancel?</title>
+   </head>
+   <style>
+       html, body {
+            margin: 0;
+            height: 100%;
+           background-color:#19c5e3;
+        }
+   </style>
+   <body>
+       <section>
+           <br>
+       </section>
+      <section class="container is-primary">
+          <div class="box">
+            <div class="tile is-parent">
+              <article class="tile is-child">
+                <p class="title">Will our clients cancel?</p>
+                <p class="subtitle">Please fill out this form.</p>
+                <div class="content">
+                    <hr class="is-primary">
+                </div>
+              </article>
+            </div><!-- tile -->
+             <div class="notification">
+                <p class="is-size-4">
+                  The user <strong>{{surname}}</strong> is likeky to <strong>{{churn}}</strong>
+                </p>
+            </div>
+             <footer>
+                <form method="GET" action="/">
+                      <div class="field is-grouped is-grouped-right">
+                          <p class="control">
+                              <button type="submit" class="button is-primary has-text-white">Go back</button>
+                          </p>
+                        </div>
+                   </form>
+             </footer>
+
+          </div> <!-- box -->
+      </section>
+       <section>
+              <br>
+          </section>
+   </body>
+</html>
+
