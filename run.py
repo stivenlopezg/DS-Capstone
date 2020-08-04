@@ -45,7 +45,10 @@ def get_churn_prediction():
     model = load_model(model_path='models/gboosting.pkl')
     prediction = predict(model=model, data=data)
     churn = 'Let him go' if prediction.get("prediction") == 1 else 'remain a user'
-    return f'<h1>The user {surname} is likeky to {churn}'
+    # return f'<h1>The user {surname} is likeky to {churn}'
+    return render_template("prediction.html",
+                           surname=surname,
+                           churn=churn)
 
 
 if __name__ == '__main__':

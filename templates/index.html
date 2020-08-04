@@ -1,46 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <title>Will our clients cancel?</title>
-</head>
-<body>
-<div class="align-center">
-   <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">Will our clients cancel?</h5>
-        <form method="POST" action="/churn">
-            <div class="form-group">
-                <label for="id"></label>
-                <input type="text" class="form-control" id="id" name="id" aria-describedby="emailHelp" placeholder="Id">
-                <label for="customer"></label>
-                <input type="text" class="form-control" id="customer" name="customer" aria-describedby="emailHelp" placeholder="Customer Id">
-                <label for="surname"></label>
-                <input type="text" class="form-control" id="surname" name="surname" aria-describedby="emailHelp" placeholder="Surname">
-                <label for="score"></label>
-                <input type="text" class="form-control" id="score" name="score" aria-describedby="emailHelp" placeholder="Credit Score">
-                <label for="geography"></label>
-                <input type="text" class="form-control" id="geography" name="geography" aria-describedby="emailHelp" placeholder="geography">
-                <label for="gender"></label>
-                <input type="text" class="form-control" id="gender" name="gender" aria-describedby="emailHelp" placeholder="Gender">
-                <label for="age"></label>
-                <input type="text" class="form-control" id="age" name="age" aria-describedby="emailHelp" placeholder="Age">
-                <label for="tenure"></label>
-                <input type="text" class="form-control" id="tenure" name="tenure" aria-describedby="emailHelp" placeholder="Tenure">
-                <label for="balance"></label>
-                <input type="text" class="form-control" id="balance" name="balance" aria-describedby="emailHelp" placeholder="Balance">
-                <label for="products"></label>
-                <input type="text" class="form-control" id="products" name="products" aria-describedby="emailHelp" placeholder="Number of products">
-                <label for="crcard"></label>
-                <input type="text" class="form-control" id="crcard" name="crcard" aria-describedby="emailHelp" placeholder="Has Credit Card">
-                <label for="activemember"></label>
-                <input type="text" class="form-control" id="activemember" name="activemember" aria-describedby="emailHelp" placeholder="Is Active Member">
-                <label for="salary"></label>
-                <input type="text" class="form-control" id="salary" name="salary" aria-describedby="emailHelp" placeholder="Estimated Salary">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-    </div>
-</div>
+   <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.min.css') }}">
+      <title>Will our clients cancel?</title>
+   </head>
+   <style>
+       html, body {
+            margin: 0;
+            height: 100%;
+           background-color:#DDDDDD;
+        }
+   </style>
+   <body>
+   <section>
+       <br>
+   </section>
+      <section class="container">
+          <div class="box">
+            <div class="tile is-parent">
+              <article class="tile is-child">
+                <p class="title">Will our clients cancel?</p>
+                <p class="subtitle">Please fill out this form.</p>
+                <div class="content">
+                    <hr class="is-primary">
+                </div>
+              </article>
+            </div><!-- tile -->
+              <form id="predform" method="POST" action="/churn">
+                  <div class="columns is-variable">
+                    <div class="column is-primary">
+                        <div class="notification">
+                            <div class="field">
+                              <label class="label" for="id">Id</label>
+                              <div class="control">
+                                <input class="input" type="text" id="id" name="id">
+                              </div>
+                            </div>
+                            <div class="field">
+                              <label class="label" for="customer">Customer</label>
+                              <div class="control">
+                                <input class="input" type="text" id="customer" name="customer">
+                              </div>
+                            </div>
+                            <div class="field">
+                              <label class="label" for="surname">Surname</label>
+                              <div class="control">
+                                <input class="input" type="text" id="surname" name="surname">
+                              </div>
+                                <p class="help">String</p>
+                            </div>
+                            <div class="field">
+                              <label class="label" for="score">Score</label>
+                              <div class="control">
+                                <input class="input" type="text" id="score" name="score">
+                              </div>
+                            </div>
+                            <div class="field">
+                              <label class="label" for="geography">Geography</label>
+                              <div class="control">
+                                <input class="input" type="text" id="geography" name="geography">
+                              </div>
+                                <p class="help">String</p>
+                            </div>
+                            <div class="columns">
+                                <div class="column">
+                                    <div class="field">
+                                      <label class="label" for="gender">Gender</label>
+                                      <div class="control">
+                                          <div class="select">
+                                              <select id="gender" name="gender">
+                                                <option value="" disabled>----------Choose----------</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Male">Male</option>
+                                              </select>
+
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="field">
+                                      <label class="label" for="age">Age</label>
+                                      <div class="control">
+                                        <input class="input" type="text" id="age" name="age">
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                      <div class="column is-primary">
+                          <div class="notification">
+                              <div class="field">
+                                  <label class="label" for="tenure">Tenure</label>
+                                  <div class="control">
+                                    <input class="input" type="text" id="tenure" name="tenure">
+                                  </div>
+                                </div>
+                              <div class="field">
+                                  <label class="label" for="balance">Balance</label>
+                                  <div class="control">
+                                    <input class="input" type="text" id="balance" name="balance">
+                                  </div>
+                                </div>
+                              <div class="field">
+                                  <label class="label" for="products">Products</label>
+                                  <div class="control">
+                                    <input class="input" type="text" id="products" name="products">
+                                  </div>
+                                </div>
+                              <div class="field">
+                                  <label class="label" for="crcard">Crcard</label>
+                                  <div class="control">
+                                    <input class="input" type="text" id="crcard" name="crcard">
+                                  </div>
+                                </div>
+                              <div class="field">
+                                  <label class="label" for="activemember">Active Member</label>
+                                  <div class="control">
+                                    <input class="input" type="text" id="activemember" name="activemember">
+                                  </div>
+                                </div>
+                              <div class="field">
+                                  <label class="label" for="salary">Salary</label>
+                                  <div class="control">
+                                    <input class="input" type="text" id="salary" name="salary">
+                                  </div>
+                                </div>
+                          </div>
+                    </div>
+                  </div>
+                  <footer>
+                      <div class="field is-grouped is-grouped-right">
+                          <p class="control">
+                              <button type="submit" class="button is-primary has-text-white">Submit</button>
+                          </p>
+                          <p class="control">
+                              <button type="submit" class="button is-light" onclick="clearForm(); return false">Clear</button>
+                          </p>
+                        </div>
+                  </footer>
+              </form>
+
+          </div> <!-- box -->
+      </section>
+      <section>
+          <br>
+      </section>
+       <script>
+             function clearForm() {
+                document.getElementById("predform").reset();
+
+             }
+       </script>
+   </body>
+</html>
+

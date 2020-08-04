@@ -1,0 +1,5 @@
+joblib
+Flask-RESTful
+Flask
+pandas
+scikit-learn
